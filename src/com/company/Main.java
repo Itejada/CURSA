@@ -1,9 +1,43 @@
 package com.company;
 
+import javax.sound.midi.Soundbank;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+    Scanner scanner= new Scanner(System.in);
+        boolean error= true;
+        String opcion="n";
+
+    /* Alt+22 = ▬ */
+        do {
+            System.out.println("\nIntrodcir Piloto☺\t(np)\nElegir Circuito \t(c)\nIniciar carrera\t(go)");
+            switch (scanner.nextLine()) {
+                case "np":
+                    do{
+
+                        System.out.println("Deseas agregar a otro piloto? s || Cualquuier caracter");
+                        opcion= scanner.nextLine();
+                    }while(opcion.equals("s"));
+
+                    break;
+                case "c":
+
+                    break;
+                case "go":
+
+                    break;
+                case "s":
+                    error= false;
+                    break;
+                default:
+                    System.out.println("Error, asegurese de que esta introduciendo correctamente la opcion en minusculas");
+                    error=true;
+            }
+        }while (error);
+
     }
 }
 
@@ -11,7 +45,7 @@ public class Main {
  Caracteristica 1: preparar cursa
  Escenari: Triar participants
  Given pregunta cuants participants  hi ha
- ehrn infiquem  el numero  de partc
+ wehn infiquem  el numero  de partc
  then crear pilots i cotxes
 
  Escenari: indicar el circuit on es fa la cursa
