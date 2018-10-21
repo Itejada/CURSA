@@ -2,9 +2,10 @@ package com.company;
 
 public class Piloto {
 
+    Piloto piloto = new Piloto();
     private  String nombre;
     private  String escuderia;
-    private String[] ListaPilotos = new String[10];
+    private Piloto[] ListaPilotos = new Piloto[10];
     private int NumreoLista=0;
 
     public String getNombre() {
@@ -23,15 +24,11 @@ public class Piloto {
         this.escuderia = escuderia;
     }
 
+    public String ListaPilotos(){
 
-    public String Pilotos(String nombre){
+        ListaPilotos[++NumreoLista]=this.piloto;
 
-        setNombre(nombre);
-        ListaPilotos[++NumreoLista]=this.nombre;
-
-
-        return "Nada";
+        return "nada";
     }
-
 
 }

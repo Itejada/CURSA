@@ -10,18 +10,22 @@ public class Main {
     Scanner scanner= new Scanner(System.in);
         boolean error= true;
         String opcion="n";
+        Piloto piloto= new Piloto();
 
     /* Alt+22 = ▬ */
         do {
-            System.out.println("\nIntrodcir Piloto☺\t(np)\nElegir Circuito \t(c)\nIniciar carrera\t(go)");
+            System.out.println("\nIntrodcir Piloto☺\t(np)\nElegir Circuito \t(c)\nIniciar carrera\t\t(go)");
             switch (scanner.nextLine()) {
                 case "np":
                     do{
-
-                        System.out.println("Deseas agregar a otro piloto? s || Cualquuier caracter");
+                        System.out.println("Introduce el nombre del piloto");
+                        piloto.setNombre(scanner.nextLine());
+                        System.out.println("Inroduce su escuderia");
+                        piloto.setEscuderia(scanner.nextLine());
+                        piloto.ListaPilotos();
+                        System.out.println("Deseas agregar a otro piloto?\n introduce: (s)Si|| Cualquuier caracter para no.");
                         opcion= scanner.nextLine();
                     }while(opcion.equals("s"));
-
                     break;
                 case "c":
 
