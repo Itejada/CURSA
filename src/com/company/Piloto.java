@@ -24,11 +24,11 @@ public class Piloto {
         this.escuderia = escuderia;
     }
 
-    public String ListaPilotos(){
+    public Piloto[] ListaPilotos(){
 
         ListaPilotos[++NumreoLista]=this.piloto;
 
-        return "nada";
+        return ListaPilotos;
     }
 
 }
