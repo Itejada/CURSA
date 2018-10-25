@@ -5,9 +5,9 @@ public class Piloto extends Persona{
 
     private String escuderia;
     private int numeroPiloto;
-    private Coche coche;
+    private int coche;
 
-    public Piloto(String nombre,String sexo,String escuderia, int numeroPiloto, Coche coche){
+    public Piloto(String nombre,String sexo,String escuderia, int numeroPiloto, int coche){
         this.nombre=nombre;
         this.sexo= sexo;
         this.escuderia=escuderia;
@@ -32,11 +32,11 @@ public class Piloto extends Persona{
         this.sexo = sexo;
     }
 
-    public void setCoche(Coche coche) {
+    public void setCoche(int coche) {
         this.coche = coche;
     }
 
-    public Coche getCoche() {
+    public int getCoche() {
         return coche;
     }
 

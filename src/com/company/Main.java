@@ -21,8 +21,8 @@ public class Main {
             switch (scanner.nextLine()) {
                 case "np":
 
-                    Piloto piloto = new Piloto("null","null","null",0,new Coche(null,0));
-                    Coche coche =new Coche("null",0);
+                    Piloto piloto = new Piloto("null","null","null",0,0);
+                    Coche coche =new Coche("null",null);
                     Lista lista=new Lista();
                     System.out.println("Cuantos participantes habran?");
                     lista.setTamañoLista(scanner.nextInt());
@@ -40,15 +40,16 @@ public class Main {
                             System.out.println("introduce la marca del coche asignado");
                             coche.setMarca(scanner.nextLine());
                             System.out.println("Potencia: 1)Baja 2)Media 3)Alta");
-                            numPotencia=scanner.nextInt()+1;
+                            coche.setPotencia(scanner.nextInt());
                             scanner.nextLine();
                             piloto.setNumeroPiloto(i+1);
-                            piloto.setCoche(new Coche(coche.getMarca(),numPotencia));
-                            lista.setPilotoEnLista(piloto.getNombre(),piloto.getSexo(),piloto.getEscuderia(),piloto.getNumeroPiloto(), piloto.getCoche() );
+                            coche.setCoche(coche.getMarca(),coche.getPotencia());
+                            lista.setPilotoEnLista(piloto.getNombre(),piloto.getSexo(),piloto.getEscuderia(),piloto.getNumeroPiloto(), piloto.getCoche(), coche.getMarca(), coche.getPotencia() );
+
 
                         }
                         for (int ç = 0; ç <lista.getTamaño(); ç++) {
-                            System.out.println("El Piloto num"+ (lista.getLista()[ç].getNumeroPiloto()+1) +": "+ lista.getLista()[ç].getNombre()+" En la escuderia: "+ lista.getLista()[ç].getEscuderia()+" Con el coche: "+ lista.getLista()[ç].getCoche());
+                            System.out.println("El Piloto num"+ (lista.getLista()[ç].getNumeroPiloto()+1) +": "+ lista.getLista()[ç].getNombre()+" En la escuderia: "+ lista.getLista()[ç].getEscuderia()+" Con el coche: "+ lista.getLista()[ç].getCoche() +" "+ lista.getListaCoches()[ç].getMarca()+" de potencia "+ lista.getListaCoches()[ç].getPotencia());
                         }
                     break;
                 case "c":

@@ -5,9 +5,9 @@ public class Coche extends Vehiculo {
     private String potencia;
 
 
-    public Coche(String marca, int numPotencia){
+    public Coche(String marca, String potencia){
         this.Marca=marca;
-        this.potencia= super.potencia[numPotencia]; /* super. indica que pertenece a la clase padre */
+        this.potencia=potencia; /* super.potencia[numPotencia];  super. indica que pertenece a la clase padre */
         this.asientos=5;
         this.ruedas=4;
 
@@ -24,12 +24,18 @@ public class Coche extends Vehiculo {
         Marca = marca;
     }
 
+
+    public void setCoche(String marca, String potencia) {
+        Coche coche = new Coche(marca,potencia);
+    }
+
+
     public String getPotencia() {
         return potencia;
     }
 
-    public void setPotencia(String potencia) {
-        this.potencia = potencia;
+    public void setPotencia(int numPotencia) {
+        this.potencia = super.potencia[numPotencia];
     }
 
 }
