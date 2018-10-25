@@ -6,11 +6,19 @@ public class Carrera {
 
 //    Carrera CrearCarrera_() {
 //
-//        Piloto[] pilotos = getPilotos();
+//        Piloto[] pilotos = ;
 //        Circuito circuito = getCircuito();
 //
 //        String Carrera=
 //    }
 //
+//
+//    public void ingresarParticipantes(String[] Lista){
+//        for (Lista: lista
+//             ) {
+//
+//        }
+//
+//    }
 
 }

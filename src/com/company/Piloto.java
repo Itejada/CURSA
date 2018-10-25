@@ -2,33 +2,52 @@ package com.company;
 
 public class Piloto {
 
-    Piloto piloto = new Piloto();
-    private  String nombre;
-    private  String escuderia;
-    private Piloto[] ListaPilotos = new Piloto[10];
-    private int NumreoLista=0;
 
-    public String getNombre() {
-        return nombre;
+    private String nombre;
+    private String escuderia;
+    private int numeroPiloto;
+    private String coche;
+
+    public Piloto(String nombre,String escuderia, int numeroPiloto, String coche){
+        this.nombre=nombre;
+        this.escuderia=escuderia;
+        this.numeroPiloto=numeroPiloto;
+        this.coche=coche;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getEscuderia() {
-        return escuderia;
-    }
-
     public void setEscuderia(String escuderia) {
         this.escuderia = escuderia;
     }
 
-    public Piloto[] ListaPilotos(){
-
-        ListaPilotos[++NumreoLista]=this.piloto;
-
-        return ListaPilotos;
+    public void setNumeroPiloto(int numeroPiloto) {
+        this.numeroPiloto = numeroPiloto;
     }
+
+    public void setCoche(String coche) {
+        this.coche = coche;
+    }
+
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getEscuderia() {
+        return escuderia;
+    }
+
+    public int getNumeroPiloto(){
+        return numeroPiloto;
+    }
+
+    public String getCoche(){
+        return coche;
+    }
+
 
 }
