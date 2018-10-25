@@ -10,7 +10,7 @@ public class Main {
     Scanner scanner= new Scanner(System.in);
         boolean error= true;
         String opcion="n";
-        String nombre,escuderia,coche;
+        int numPotencia;
 
 
 
@@ -21,7 +21,8 @@ public class Main {
             switch (scanner.nextLine()) {
                 case "np":
 
-                    Piloto piloto = new Piloto("null","null",0,"null");
+                    Piloto piloto = new Piloto("null","null","null",0,new Coche(null,0));
+                    Coche coche =new Coche("null",0);
                     Lista lista=new Lista();
                     System.out.println("Cuantos participantes habran?");
                     lista.setTamañoLista(scanner.nextInt());
@@ -29,23 +30,21 @@ public class Main {
                         lista.setLista();
 
                         for (int i = 0; i < lista.getTamaño(); i++) {
-//                            System.out.println("Introduce el nombre del piloto "+(i+1));
-//                            nombre=scanner.nextLine();
-//                            System.out.println("Inroduce su escuderia");
-//                            escuderia=scanner.nextLine();
-//                            System.out.println("introduce el coche asignado");
-//                            coche= scanner.nextLine();
-//                            Pilotos[i]=new Piloto(nombre,escuderia,i,coche);
-// Pilotos[i]=new Piloto(piloto.getNombre(),piloto.getEscuderia(),i,piloto.getCoche());
 
                             System.out.println("Introduce el nombre del piloto "+(i+1));
                             piloto.setNombre(scanner.nextLine());
+                            System.out.println("Hombre o mujer?");
+                            piloto.setSexo(scanner.nextLine());
                             System.out.println("Inroduce su escuderia");
                             piloto.setEscuderia(scanner.nextLine());
-                            System.out.println("introduce el coche asignado");
-                            piloto.setCoche(scanner.nextLine());
+                            System.out.println("introduce la marca del coche asignado");
+                            coche.setMarca(scanner.nextLine());
+                            System.out.println("Potencia: 1)Baja 2)Media 3)Alta");
+                            numPotencia=scanner.nextInt()+1;
+                            scanner.nextLine();
                             piloto.setNumeroPiloto(i+1);
-                            lista.setPilotoEnLista(piloto.getNombre(),piloto.getEscuderia(),piloto.getNumeroPiloto(),piloto.getCoche());
+                            piloto.setCoche(new Coche(coche.getMarca(),numPotencia));
+                            lista.setPilotoEnLista(piloto.getNombre(),piloto.getSexo(),piloto.getEscuderia(),piloto.getNumeroPiloto(), piloto.getCoche() );
 
                         }
                         for (int ç = 0; ç <lista.getTamaño(); ç++) {

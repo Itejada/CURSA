@@ -1,18 +1,19 @@
 package com.company;
 
-public class Piloto {
+public class Piloto extends Persona{
 
 
-    private String nombre;
     private String escuderia;
     private int numeroPiloto;
-    private String coche;
+    private Coche coche;
 
-    public Piloto(String nombre,String escuderia, int numeroPiloto, String coche){
+    public Piloto(String nombre,String sexo,String escuderia, int numeroPiloto, Coche coche){
         this.nombre=nombre;
+        this.sexo= sexo;
         this.escuderia=escuderia;
         this.numeroPiloto=numeroPiloto;
         this.coche=coche;
+
     }
 
     public void setNombre(String nombre) {
@@ -27,11 +28,17 @@ public class Piloto {
         this.numeroPiloto = numeroPiloto;
     }
 
-    public void setCoche(String coche) {
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setCoche(Coche coche) {
         this.coche = coche;
     }
 
-
+    public Coche getCoche() {
+        return coche;
+    }
 
     public String getNombre() {
         return nombre;
@@ -45,9 +52,10 @@ public class Piloto {
         return numeroPiloto;
     }
 
-    public String getCoche(){
-        return coche;
-    }
 
+
+    public String getSexo(){
+        return sexo;
+    }
 
 }

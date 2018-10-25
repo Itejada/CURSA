@@ -14,9 +14,9 @@ public class Lista {
         Piloto[] Pilotos = new Piloto[this.Tamaño];
 
     }
-    public void setPilotoEnLista(String nombre,String escuderia,int num,String coche){
+    public void setPilotoEnLista(String nombre,String sexo,String escuderia,int num,Coche coche){
 
-        Pilotos[num-1]=new Piloto(nombre,escuderia,num,coche);
+        Pilotos[num-1]=new Piloto(nombre,sexo,escuderia,num,coche);
     }
 
     public Piloto[] getLista(){
